@@ -1,0 +1,1504 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  scroll-behavior: smooth;
+}
+
+.underline {
+  margin: 0 auto 40px;
+  width: 60px;
+  height: 4px;
+  background-color: royalblue;
+  border-radius: 20px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6vh;
+  padding: 2em;
+  background: linear-gradient(267deg, #a40606 0%, #d98324 77%);
+  z-index: 10;
+}
+
+nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background-image: url("/img/bread_big.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 9vh;
+  -webkit-filter: drop-shadow(8px 8px 24px 0px #42445a);
+          filter: drop-shadow(8px 8px 24px 0px #42445a);
+  margin: 0 auto;
+  width: 100px;
+  height: 6vh;
+}
+
+nav .nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  width: 55%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .nav-ul a {
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: snow;
+  text-shadow: 2px 4px 7px rgba(74, 75, 77, 0.6);
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+nav .burger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav .burger .line {
+  width: 3em;
+  height: 0.3em;
+  margin: 0.7em;
+  background-color: pink;
+  border-radius: 20px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.home {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.home .picture {
+  top: 6vh;
+  background-image: url("../img/bakery_big.jpeg");
+  background-repeat: space;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.home .picture-shadow {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+}
+
+.home .header-conteiner {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.9rem;
+  text-align: center;
+  text-shadow: 0px 1px 21px #394080;
+  color: #d1cece;
+  z-index: 1;
+}
+
+.home a {
+  text-decoration: none;
+  color: #d1cece;
+}
+
+.home .arrow {
+  position: absolute;
+  text-decoration: none;
+  background: none;
+  font-size: 7rem;
+  bottom: 10px;
+}
+
+.home .end-of-text {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+@media (min-width: 320px) {
+  nav {
+    -webkit-transition: top 200ms ease-in-out;
+    transition: top 200ms ease-in-out;
+  }
+  nav .logo {
+    background-image: url("../img/bread_small.png");
+    position: relative;
+    margin-left: 4px;
+  }
+  nav .burger {
+    display: block;
+  }
+  nav .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 7vh;
+    background-image: linear-gradient(271deg, #a40606 0%, #d98324 77%);
+  }
+  nav .nav-ul a {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  nav .nav-ul.active {
+    visibility: visible;
+    height: 94vh;
+  }
+  .up {
+    top: -7vh;
+  }
+  .home .picture {
+    background-image: url("../img/bakery_small.jpeg");
+  }
+  .home .header-conteiner {
+    font-size: 2rem;
+  }
+  .home .arrow {
+    font-size: 4rem;
+  }
+  .aboutus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .aboutus .picture {
+    position: relative;
+    background-image: url("../img/bakery_room_small.jpeg");
+    background-position: 75%;
+    background-size: cover;
+    width: 100%;
+    height: 170vh;
+  }
+  .aboutus .picture .picture-shadow {
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .header-text {
+    margin: 0 20px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #d1cece;
+  }
+  .aboutus .header-text h3 {
+    margin-top: 20px;
+  }
+  .aboutus .header-text .underline {
+    margin: 10px 0;
+  }
+  .aboutus .pictures {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 130px;
+    color: #d1cece;
+  }
+  .aboutus .pictures .square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 180px;
+    margin-top: 20px;
+  }
+  .aboutus .pictures .square .picture-person {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .boss {
+    background-image: url("/img/persons/boss_small.jpeg");
+    background-position: 90%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .baker {
+    background-image: url("/img/persons/baker_small.jpeg");
+    background-position: 0%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .baker-girl {
+    background-image: url("/img/persons/baker_girl_small.jpeg");
+    background-position: 90%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .seller {
+    background-image: url("/img/persons/seller_small.jpeg");
+    background-position: 30%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .picture-shadow {
+    background-color: rgba(66, 68, 90, 0.4);
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .square-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 75px;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: rgba(57, 64, 128, 0.6);
+  }
+  .stuff {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  .stuff .stuff-picture {
+    position: absolute;
+    background-image: url("../img/stuff_small.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 40% 60%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .stuff .stuff-picture .stuff-picture-shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .stuff-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: #d1cece;
+    font-size: 1.3rem;
+    z-index: 1;
+  }
+  .stuff .stuff-title h3 {
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  .stuff .stuff-title .underline {
+    margin: 15px;
+  }
+  .stuff .stuff-title p {
+    text-align: center;
+  }
+  .stuff .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .stuff .gallery .square {
+    width: 110px;
+    height: 110px;
+    margin: 25px 10px;
+  }
+  .stuff .gallery .square .square1 {
+    background-image: url("../img/wypieki/bagietka_small.jpeg");
+    background-position: 15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .gallery .square .square2 {
+    background-image: url("../img/wypieki/precelki_small.jpeg");
+    background-position: 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .gallery .square .square3 {
+    background-image: url("../img/wypieki/bulki_small.jpeg");
+    background-position: 15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .gallery .square .square4 {
+    background-image: url("../img/wypieki/cynamonka_small.jpeg");
+    background-position: 15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .gallery .square .square5 {
+    background-image: url("../img/wypieki/halka_small.jpeg");
+    background-position: 15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .gallery .square .square6 {
+    background-image: url("../img/wypieki/rogalik_small.jpeg");
+    background-position: 15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .shops {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .shops .shops-photo {
+    position: absolute;
+    background-image: url("../img/lokalization/budynek_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .shops .shops-photo .shops-shadow {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+  }
+  .shops .shops-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .shops .shops-text h3 {
+    font-size: 4.5rem;
+    color: #d1cece;
+  }
+  .shops .shops-text .underline {
+    width: 125px;
+  }
+  .shops .shops-mini-map {
+    margin-top: 28%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: 60%;
+  }
+  .shops .shops-mini-map .square {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40%;
+    height: 60%;
+    background-color: red;
+    -webkit-transition: -webkit-transform 0.7s;
+    transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    transition: transform 0.7s, -webkit-transform 0.7s;
+  }
+  .shops .shops-mini-map .square .text-on-square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 35%;
+    color: #d1cece;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .shops .shops-mini-map .square .text-on-square h3 {
+    font-size: 2.1rem;
+  }
+  .shops .shops-mini-map .square .text-on-square p {
+    font-size: 1.6rem;
+  }
+  .shops .shops-mini-map .square:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .shops .shops-mini-map .photo1 {
+    background-image: url("../img/lokalization/photo_1_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+  }
+  .shops .shops-mini-map .photo2 {
+    background-image: url("../img/lokalization/photo_2_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+  }
+  .shops .shops-mini-map .photo3 {
+    background-image: url("../img/lokalization/photo_3_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 10vh;
+  }
+  .contact .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .contact .social i {
+    font-size: 10vh;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+  }
+  .contact .social i:hover {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .contact .faceb {
+    background-color: #4267b2;
+  }
+  .contact .insta {
+    background: -webkit-gradient(linear, left top, right top, from(#515bd4), color-stop(25%, #8134af), color-stop(50%, #dd2a7b), color-stop(75%, #feda77), to(#f58529));
+    background: linear-gradient(90deg, #515bd4 0%, #8134af 25%, #dd2a7b 50%, #feda77 75%, #f58529 100%);
+  }
+  .contact .google {
+    color: black;
+    background: -webkit-gradient(linear, left top, right top, from(#ff000e), color-stop(33%, #fdef1d), color-stop(67%, #1fa741), to(#383bd1));
+    background: linear-gradient(90deg, #ff000e 0%, #fdef1d 33%, #1fa741 67%, #383bd1 100%);
+  }
+  .contact .twit {
+    background-color: #00acee;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  nav .logo {
+    background-image: url("../img/bread_small.png");
+    position: relative;
+    margin-left: 4px;
+  }
+  nav .burger {
+    display: block;
+  }
+  nav .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 94vh;
+    right: 0;
+    top: 6vh;
+    background-image: linear-gradient(271deg, #a40606 0%, #d98324 77%);
+  }
+  nav .nav-ul a {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  nav .nav-ul.active {
+    visibility: visible;
+    height: 94vh;
+  }
+  .home .picture {
+    background-image: url("../img/bakery_small.jpeg");
+  }
+  .home .header-conteiner {
+    font-size: 2rem;
+  }
+  .home .arrow {
+    font-size: 4rem;
+  }
+  .aboutus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  .aboutus .picture {
+    height: 100%;
+  }
+  .aboutus .header-text {
+    font-size: 2.3rem;
+  }
+  .aboutus .pictures .square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 270px;
+    height: 190px;
+  }
+  .aboutus .pictures .square .picture-person {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .boss {
+    background-image: url("../img/persons/boss_big.jpeg");
+    background-position: 100%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .baker {
+    background-image: url("../img/persons/baker_big.jpeg");
+    background-position: 0%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .baker-girl {
+    background-image: url("../img/persons/baker_girl_big.jpeg");
+    background-position: 90% 30%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .seller {
+    background-image: url("../img/persons/seller_big.jpeg");
+    background-position: 30%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .picture-shadow {
+    background-color: rgba(66, 68, 90, 0.4);
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .square-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgba(57, 64, 128, 0.6);
+  }
+  .stuff {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .stuff .stuff-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    margin-bottom: 40%;
+    text-align: center;
+    height: 60vh;
+  }
+  .stuff .stuff-title h3 {
+    font-size: 3.6rem;
+  }
+  .stuff .stuff-title .underline {
+    width: 200px;
+  }
+  .stuff .stuff-title p {
+    font-size: 2.6rem;
+  }
+  .stuff .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 50%;
+    height: 40vh;
+  }
+  .stuff .gallery .square {
+    min-width: 270px;
+    max-width: 350px;
+    min-height: 220px;
+    max-height: 300px;
+    margin: 5px 5px;
+  }
+  .shops {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .shops .shops-photo {
+    position: absolute;
+    background-image: url("../img/lokalization/budynek_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .shops .shops-photo .shops-shadow {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+  }
+  .shops .shops-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .shops .shops-text h3 {
+    font-size: 4.5rem;
+    color: #d1cece;
+  }
+  .shops .shops-text .underline {
+    width: 125px;
+  }
+  .shops .shops-mini-map {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    width: 100%;
+    height: 60%;
+  }
+  .shops .shops-mini-map .square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 30%;
+    height: 60%;
+    background-color: red;
+    -webkit-transition: -webkit-transform 0.7s;
+    transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    transition: transform 0.7s, -webkit-transform 0.7s;
+  }
+  .shops .shops-mini-map .square .text-on-square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 30%;
+    color: #d1cece;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .shops .shops-mini-map .square .text-on-square h3 {
+    font-size: 2.7rem;
+  }
+  .shops .shops-mini-map .square .text-on-square p {
+    font-size: 2.1rem;
+  }
+  .shops .shops-mini-map .square:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .shops .shops-mini-map .photo1 {
+    background-image: url("../img/lokalization/photo_1_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+  }
+  .shops .shops-mini-map .photo2 {
+    background-image: url("../img/lokalization/photo_2_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+  }
+  .shops .shops-mini-map .photo3 {
+    background-image: url("../img/lokalization/photo_3_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+  }
+}
+
+@media (min-width: 1025px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    -webkit-transition: top 200ms ease-in-out;
+    transition: top 200ms ease-in-out;
+  }
+  nav .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    visibility: visible;
+    height: 6vh;
+    top: 0;
+    left: 0;
+    background: transparent;
+  }
+  nav .nav-ul .list-open {
+    -webkit-transition: color 0.9s;
+    transition: color 0.9s;
+    padding-bottom: 17px;
+  }
+  nav .nav-ul .list-open:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  nav .burger {
+    display: none;
+  }
+  .up {
+    top: -6vh;
+  }
+  .home .picture {
+    background-image: url("../img/bakery_big.jpeg");
+  }
+  .home .header-conteiner {
+    font-size: 2rem;
+  }
+  .home .arrow {
+    font-size: 4rem;
+  }
+  .aboutus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .aboutus .picture {
+    position: relative;
+    background-image: url("../img/bakery_room_big.jpeg");
+    background-position: 75%;
+    background-size: cover;
+    width: 100%;
+    height: 110vh;
+  }
+  .aboutus .picture .picture-shadow {
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .header-text {
+    margin: 70px 20px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    font-size: 2.7rem;
+    color: #d1cece;
+  }
+  .aboutus .header-text h3 {
+    margin-top: 20px;
+  }
+  .aboutus .header-text .underline {
+    margin: 10px 0;
+  }
+  .aboutus .pictures {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 300px;
+    color: #d1cece;
+  }
+  .aboutus .pictures .square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px 20px;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  .aboutus .pictures .square .picture-person {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .boss {
+    background-image: url("../img/persons/boss_big.jpeg");
+    background-position: 90%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .baker {
+    background-image: url("../img/persons/baker_big.jpeg");
+    background-position: 0%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .baker-girl {
+    background-image: url("../img/persons/baker_girl_big.jpeg");
+    background-position: 90%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .seller {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url("../img/persons/seller_big.jpeg");
+    background-position: 30%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .picture-person .picture-shadow {
+    background-color: rgba(66, 68, 90, 0.4);
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus .pictures .square .square-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32%;
+    font-size: 2.9rem;
+    text-align: center;
+    background-color: rgba(57, 64, 128, 0.6);
+  }
+  .aboutus .pictures .square:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .stuff {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .stuff .stuff-picture {
+    background-image: url("../img/stuff_big.jpeg");
+  }
+  .stuff .stuff-title {
+    z-index: 0;
+  }
+  .stuff .stuff-title h3 {
+    font-size: 4.5rem;
+  }
+  .stuff .stuff-title .underline {
+    width: 300px;
+  }
+  .stuff .stuff-title p {
+    font-size: 3.2rem;
+  }
+  .stuff .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 1;
+    height: 70vh;
+    width: 100%;
+  }
+  .stuff .gallery .square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 35%;
+    height: 30%;
+    -webkit-transition: -webkit-transform 0.9s;
+    transition: -webkit-transform 0.9s;
+    transition: transform 0.9s;
+    transition: transform 0.9s, -webkit-transform 0.9s;
+  }
+  .stuff .gallery .square:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .stuff .gallery .square1 {
+    background-image: url("../img/wypieki/bagietka_big.jpeg");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .stuff .gallery .square2 {
+    background-image: url("../img/wypieki/precelki_big.jpeg");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .gallery .square3 {
+    background-image: url("../img/wypieki/bulki_big.jpeg");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .gallery .square4 {
+    background-image: url("../img/wypieki/cynamonka_big.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .gallery .square5 {
+    background-image: url("../img/wypieki/halka_big.jpeg");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .stuff .gallery .square6 {
+    background-image: url("../img/wypieki/rogalik_big.jpeg");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .shops {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .shops .shops-photo {
+    position: absolute;
+    background-image: url("../img/lokalization/budynek_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .shops .shops-photo .shops-shadow {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+  }
+  .shops .shops-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .shops .shops-text h3 {
+    font-size: 4.5rem;
+    color: #d1cece;
+  }
+  .shops .shops-text .underline {
+    width: 125px;
+  }
+  .shops .shops-mini-map {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    width: 100%;
+    height: 50%;
+  }
+  .shops .shops-mini-map .square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 30%;
+    height: 50%;
+    background-color: red;
+    -webkit-transition: -webkit-transform 0.7s;
+    transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    transition: transform 0.7s, -webkit-transform 0.7s;
+  }
+  .shops .shops-mini-map .square .text-on-square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 40%;
+    color: #d1cece;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .shops .shops-mini-map .square .text-on-square h3 {
+    font-size: 3rem;
+  }
+  .shops .shops-mini-map .square .text-on-square p {
+    font-size: 2.4rem;
+  }
+  .shops .shops-mini-map .square:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .shops .shops-mini-map .photo1 {
+    background-image: url("../img/lokalization/photo_1_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+  }
+  .shops .shops-mini-map .photo2 {
+    background-image: url("../img/lokalization/photo_2_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+  }
+  .shops .shops-mini-map .photo3 {
+    background-image: url("../img/lokalization/photo_3_big.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid grey;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 20vh;
+  }
+  .contact .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .contact .social i {
+    font-size: 20vh;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+  }
+  .contact .social i:hover {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .contact .faceb {
+    background-color: #4267b2;
+  }
+  .contact .insta {
+    background: -webkit-gradient(linear, left top, right top, from(#515bd4), color-stop(25%, #8134af), color-stop(50%, #dd2a7b), color-stop(75%, #feda77), to(#f58529));
+    background: linear-gradient(90deg, #515bd4 0%, #8134af 25%, #dd2a7b 50%, #feda77 75%, #f58529 100%);
+  }
+  .contact .google {
+    color: black;
+    background: -webkit-gradient(linear, left top, right top, from(#ff000e), color-stop(33%, #fdef1d), color-stop(67%, #1fa741), to(#383bd1));
+    background: linear-gradient(90deg, #ff000e 0%, #fdef1d 33%, #1fa741 67%, #383bd1 100%);
+  }
+  .contact .twit {
+    background-color: #00acee;
+  }
+}
+/*# sourceMappingURL=main.css.map */

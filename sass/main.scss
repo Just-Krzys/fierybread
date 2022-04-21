@@ -1,0 +1,1206 @@
+// Global Settings
+@import 'colors';
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	scroll-behavior: smooth;
+}
+//navigation
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: royalblue;
+	border-radius: 20px;
+	// background-color: $main-color;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	// position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 6vh;
+	padding: 2em;
+	background: $bg-nav-image;
+	z-index: 10;
+
+	//Dodac logo
+	.logo {
+		display: flex;
+		justify-content: start;
+		background-image: url('/img/bread_big.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 9vh;
+		filter: drop-shadow(8px 8px 24px 0px rgba(66, 68, 90, 1));
+		// box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+		margin: 0 auto;
+		width: 100px;
+		height: 6vh;
+	}
+	.nav-ul {
+		display: flex;
+		list-style-type: none;
+		width: 55%;
+		justify-content: space-around;
+
+		a {
+			text-decoration: none;
+			font-size: 1.9rem;
+			font-weight: bold;
+			color: $snow;
+			text-shadow: 2px 4px 7px rgba(74, 75, 77, 0.6);
+			text-transform: uppercase;
+			padding: 1em;
+		}
+	}
+
+	.burger {
+		display: none;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		.line {
+			width: 3em;
+			height: 0.3em;
+			margin: 0.7em;
+			background-color: $nav-burger;
+			border-radius: 20px;
+			transition: 0.3s ease-in-out;
+		}
+	}
+}
+//-----------
+// section home
+.home {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	.picture {
+		top: 6vh;
+		background-image: url('../img/bakery_big.jpeg');
+		background-repeat: space;
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+
+		width: 100vw;
+		height: 100vh;
+		z-index: -1;
+	}
+	.picture-shadow {
+		background-color: rgba($color: #000000, $alpha: 0.6);
+		width: 100%;
+		height: 100vh;
+	}
+	.header-conteiner {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 2.9rem;
+		text-align: center;
+		text-shadow: 0px 1px 21px rgba(57, 64, 128, 1);
+		color: $snow-header;
+		z-index: 1;
+	}
+	a {
+		text-decoration: none;
+		color: $snow-header;
+	}
+	.arrow {
+		position: absolute;
+		text-decoration: none;
+		background: none;
+		font-size: 7rem;
+		bottom: 10px;
+	}
+	.end-of-text {
+		transition: 0.3s;
+		transform: translate(0);
+	}
+}
+//section home
+//section aboutus
+
+//section aboutus
+
+//--------
+// Adjustment to different resolutions
+
+@media (min-width: 320px) {
+	nav {
+		// position: fixed;
+		transition: top 200ms ease-in-out;
+		.logo {
+			background-image: url('../img/bread_small.png');
+			position: relative;
+			margin-left: 4px;
+		}
+		.burger {
+			display: block;
+		}
+		.nav-ul {
+			display: flex;
+			visibility: hidden;
+			position: absolute;
+			flex-direction: column;
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			right: 0;
+			// bottom: 0;
+			top: 7vh;
+			background-image: $bg-nav-image-we;
+
+			a {
+				font-size: 2.5rem;
+				letter-spacing: 1px;
+			}
+		}
+		.nav-ul.active {
+			visibility: visible;
+			height: 94vh;
+		}
+	}
+	.up {
+		top: -7vh;
+	}
+	.home {
+		.picture {
+			background-image: url('../img/bakery_small.jpeg');
+		}
+		.header-conteiner {
+			font-size: 2rem;
+		}
+		.arrow {
+			font-size: 4rem;
+		}
+	}
+	.aboutus {
+		display: flex;
+		justify-content: center;
+		.picture {
+			position: relative;
+			background-image: url('../img/bakery_room_small.jpeg');
+			background-position: 75%;
+			background-size: cover;
+			width: 100%;
+			height: 170vh;
+
+			.picture-shadow {
+				bottom: 0;
+				background-color: rgba($color: #000000, $alpha: 0.5);
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.header-text {
+			margin: 0 20px;
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			text-align: center;
+			font-size: 1.3rem;
+			color: $snow-header;
+			h3 {
+				margin-top: 20px;
+			}
+			.underline {
+				margin: 10px 0;
+			}
+		}
+		.pictures {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 130px;
+			color: $snow-header;
+			.square {
+				display: flex;
+				position: relative;
+				width: 150px;
+				height: 180px;
+				// background-color: rgb(210, 146, 146);
+				margin-top: 20px;
+				.picture-person {
+					width: 100%;
+					height: 100%;
+					.boss {
+						background-image: url('/img/persons/boss_small.jpeg');
+						background-position: 90%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.baker {
+						background-image: url('/img/persons/baker_small.jpeg');
+						background-position: 0%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.baker-girl {
+						background-image: url('/img/persons/baker_girl_small.jpeg');
+						background-position: 90%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.seller {
+						background-image: url('/img/persons/seller_small.jpeg');
+						background-position: 30%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.picture-shadow {
+						background-color: rgba(66, 68, 90, 0.4);
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.square-text {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					bottom: 0;
+					width: 150px;
+					height: 75px;
+					font-size: 1.6rem;
+					text-align: center;
+					background-color: rgba(57, 64, 128, 0.6);
+				}
+			}
+		}
+	}
+	.stuff {
+		display: flex;
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		.stuff-picture {
+			position: absolute;
+			background-image: url('../img/stuff_small.jpeg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: 40% 60%;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			.stuff-picture-shadow {
+				background-color: rgba(0, 0, 0, 0.5);
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.stuff-title {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			color: $snow-header;
+			font-size: 1.3rem;
+			z-index: 1;
+			h3 {
+				text-transform: uppercase;
+				margin-top: 15px;
+			}
+			.underline {
+				margin: 15px;
+			}
+			p {
+				text-align: center;
+			}
+		}
+		.gallery {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-content: flex-end;
+			justify-content: center;
+			.square {
+				width: 110px;
+				height: 110px;
+
+				margin: 25px 10px;
+				.square1 {
+					background-image: url('../img/wypieki/bagietka_small.jpeg');
+					background-position: 15%;
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 100%;
+					height: 100%;
+				}
+				.square2 {
+					background-image: url('../img/wypieki/precelki_small.jpeg');
+					background-position: 0%;
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 100%;
+					height: 100%;
+				}
+				.square3 {
+					background-image: url('../img/wypieki/bulki_small.jpeg');
+					background-position: 15%;
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 100%;
+					height: 100%;
+				}
+				.square4 {
+					background-image: url('../img/wypieki/cynamonka_small.jpeg');
+					background-position: 15%;
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 100%;
+					height: 100%;
+				}
+				.square5 {
+					background-image: url('../img/wypieki/halka_small.jpeg');
+					background-position: 15%;
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 100%;
+					height: 100%;
+				}
+				.square6 {
+					background-image: url('../img/wypieki/rogalik_small.jpeg');
+					background-position: 15%;
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	.shops {
+		display: flex;
+		position: relative;
+		height: 100vh;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+
+		.shops-photo {
+			position: absolute;
+			background-image: url('../img/lokalization/budynek_big.jpeg');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
+			.shops-shadow {
+				background-color: rgba(0, 0, 0, 0.6);
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.shops-text {
+			display: flex;
+			position: absolute;
+			text-align: center;
+			flex-direction: column;
+			flex-wrap: wrap;
+
+			h3 {
+				font-size: 4.5rem;
+				color: $snow-header;
+			}
+			.underline {
+				width: 125px;
+			}
+		}
+		.shops-mini-map {
+			margin-top: 28%;
+			position: absolute;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 100%;
+			height: 60%;
+			.square {
+				margin-top: 5%;
+				margin-left: 5%;
+				margin-right: 5%;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: center;
+				width: 40%;
+				height: 60%;
+				background-color: red;
+				transition: transform 0.7s;
+				.text-on-square {
+					display: flex;
+					flex-direction: column;
+					align-content: center;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 35%;
+					color: $snow-header;
+					text-align: center;
+					background-color: rgba($color: #000000, $alpha: 0.6);
+					h3 {
+						font-size: 2.1rem;
+					}
+					p {
+						font-size: 1.6rem;
+					}
+				}
+			}
+			.square:hover {
+				transform: scale(1.1);
+			}
+			.photo1 {
+				background-image: url('../img/lokalization/photo_1_big.jpeg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 1px solid grey;
+			}
+
+			.photo2 {
+				background-image: url('../img/lokalization/photo_2_big.jpeg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 1px solid grey;
+			}
+			.photo3 {
+				background-image: url('../img/lokalization/photo_3_big.jpeg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 1px solid grey;
+			}
+		}
+	}
+	.contact {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+		height: 10vh;
+		.social {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			i {
+				font-size: 10vh;
+				transition: transform 0.4s;
+			}
+			i:hover {
+				transform: scale(0.8);
+			}
+		}
+
+		.faceb {
+			background-color: #4267b2;
+		}
+		.insta {
+			background: linear-gradient(
+				90deg,
+				rgba(81, 91, 212, 1) 0%,
+				rgba(129, 52, 175, 1) 25%,
+				rgba(221, 42, 123, 1) 50%,
+				rgba(254, 218, 119, 1) 75%,
+				rgba(245, 133, 41, 1) 100%
+			);
+		}
+		.google {
+			color: black;
+			background: linear-gradient(
+				90deg,
+				rgba(255, 0, 14, 1) 0%,
+				rgba(253, 239, 29, 1) 33%,
+				rgba(31, 167, 65, 1) 67%,
+				rgba(56, 59, 209, 1) 100%
+			);
+		}
+		.twit {
+			background-color: #00acee;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	nav {
+		// position: fixed;
+
+		.logo {
+			background-image: url('../img/bread_small.png');
+			position: relative;
+			margin-left: 4px;
+		}
+		.burger {
+			display: block;
+		}
+		.nav-ul {
+			display: flex;
+			visibility: hidden;
+			position: absolute;
+			flex-direction: column;
+			text-align: center;
+			width: 100%;
+			height: 94vh;
+			right: 0;
+			top: 6vh;
+			background-image: $bg-nav-image-we;
+
+			a {
+				font-size: 2.5rem;
+				letter-spacing: 1px;
+			}
+		}
+		.nav-ul.active {
+			visibility: visible;
+			height: 94vh;
+		}
+	}
+	.home {
+		.picture {
+			background-image: url('../img/bakery_small.jpeg');
+		}
+		.header-conteiner {
+			font-size: 2rem;
+		}
+		.arrow {
+			font-size: 4rem;
+		}
+	}
+	.aboutus {
+		display: flex;
+		height: 100vh;
+		width: 100%;
+		.picture {
+			height: 100%;
+		}
+		.header-text {
+			font-size: 2.3rem;
+		}
+		.pictures {
+			.square {
+				display: flex;
+				width: 270px;
+				height: 190px;
+				.picture-person {
+					display: flex;
+					width: 100%;
+					height: 100%;
+					.boss {
+						background-image: url('../img/persons/boss_big.jpeg');
+						background-position: 100%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.baker {
+						background-image: url('../img/persons/baker_big.jpeg');
+						background-position: 0%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.baker-girl {
+						background-image: url('../img/persons/baker_girl_big.jpeg');
+						background-position: 90% 30%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.seller {
+						background-image: url('../img/persons/seller_big.jpeg');
+						background-position: 30%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.picture-shadow {
+						background-color: rgba(66, 68, 90, 0.4);
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.square-text {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					height: 40%;
+					font-size: 2rem;
+					text-align: center;
+					background-color: rgba(57, 64, 128, 0.6);
+				}
+			}
+		}
+	}
+	.stuff {
+		display: flex;
+		align-items: center;
+		height: 100vh;
+
+		.stuff-title {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: center;
+			justify-content: flex-start;
+			align-items: center;
+			position: absolute;
+			margin-bottom: 40%;
+			text-align: center;
+			height: 60vh;
+			h3 {
+				font-size: 3.6rem;
+			}
+			.underline {
+				width: 200px;
+			}
+			p {
+				font-size: 2.6rem;
+			}
+		}
+		.gallery {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			flex-direction: row;
+			margin-top: 50%;
+			height: 40vh;
+
+			.square {
+				min-width: 270px;
+				max-width: 350px;
+				min-height: 220px;
+				max-height: 300px;
+
+				margin: 5px 5px;
+			}
+		}
+	}
+	.shops {
+		display: flex;
+		position: relative;
+		height: 100vh;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+
+		.shops-photo {
+			position: absolute;
+			background-image: url('../img/lokalization/budynek_big.jpeg');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
+			.shops-shadow {
+				background-color: rgba(0, 0, 0, 0.6);
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.shops-text {
+			display: flex;
+			position: absolute;
+			text-align: center;
+			flex-direction: column;
+			flex-wrap: wrap;
+
+			h3 {
+				font-size: 4.5rem;
+				color: $snow-header;
+			}
+			.underline {
+				width: 125px;
+			}
+		}
+		.shops-mini-map {
+			position: absolute;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+			justify-content: space-around;
+			align-content: flex-end;
+			width: 100%;
+			height: 60%;
+			.square {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: center;
+				width: 30%;
+				height: 60%;
+				background-color: red;
+				transition: transform 0.7s;
+				.text-on-square {
+					display: flex;
+					flex-direction: column;
+					align-content: center;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 30%;
+					color: $snow-header;
+					background-color: rgba($color: #000000, $alpha: 0.6);
+					h3 {
+						font-size: 2.7rem;
+					}
+					p {
+						font-size: 2.1rem;
+					}
+				}
+			}
+			.square:hover {
+				transform: scale(1.1);
+			}
+			.photo1 {
+				background-image: url('../img/lokalization/photo_1_big.jpeg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 1px solid grey;
+			}
+
+			.photo2 {
+				background-image: url('../img/lokalization/photo_2_big.jpeg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 1px solid grey;
+			}
+			.photo3 {
+				background-image: url('../img/lokalization/photo_3_big.jpeg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 1px solid grey;
+			}
+		}
+	}
+}
+@media (min-width: 1025px) {
+	nav {
+		display: flex;
+		width: 100%;
+		height: 6vh;
+		transition: top 200ms ease-in-out;
+		.nav-ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			align-content: center;
+			visibility: visible;
+			height: 6vh;
+			top: 0;
+			left: 0;
+			background: transparent;
+
+			.list-open {
+				transition: color 0.9s;
+				padding-bottom: 17px;
+			}
+			.list-open:hover {
+				color: rgba(0, 0, 0, 0.6);
+			}
+		}
+
+		.burger {
+			display: none;
+		}
+	}
+	.up {
+		top: -6vh;
+	}
+
+	.home {
+		.picture {
+			background-image: url('../img/bakery_big.jpeg');
+		}
+		.header-conteiner {
+			font-size: 2rem;
+		}
+		.arrow {
+			font-size: 4rem;
+		}
+	}
+	.aboutus {
+		display: flex;
+		justify-content: center;
+		.picture {
+			position: relative;
+			background-image: url('../img/bakery_room_big.jpeg');
+			background-position: 75%;
+			background-size: cover;
+			width: 100%;
+			height: 110vh;
+
+			.picture-shadow {
+				bottom: 0;
+				background-color: rgba($color: #000000, $alpha: 0.5);
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.header-text {
+			margin: 70px 20px;
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			text-align: center;
+			font-size: 2.7rem;
+			color: $snow-header;
+			h3 {
+				margin-top: 20px;
+			}
+			.underline {
+				margin: 10px 0;
+			}
+		}
+		.pictures {
+			position: absolute;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+
+			align-items: center;
+			margin-top: 300px;
+			color: $snow-header;
+			.square {
+				display: flex;
+				position: relative;
+				width: 300px;
+				height: 350px;
+				// background-color: rgb(210, 146, 146);
+				// margin-top: 20px;
+				margin: 20px 20px;
+				transition: transform 0.3s;
+				.picture-person {
+					width: 100%;
+					height: 100%;
+					.boss {
+						background-image: url('../img/persons/boss_big.jpeg');
+						background-position: 90%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.baker {
+						background-image: url('../img/persons/baker_big.jpeg');
+						background-position: 0%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.baker-girl {
+						background-image: url('../img/persons/baker_girl_big.jpeg');
+						background-position: 90%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+					}
+					.seller {
+						display: flex;
+						background-image: url('../img/persons/seller_big.jpeg');
+						background-position: 30%;
+						background-size: cover;
+						width: 100%;
+						height: 100%;
+						// flex-shrink: 3;
+					}
+					.picture-shadow {
+						background-color: rgba(66, 68, 90, 0.4);
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.square-text {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					height: 32%;
+					font-size: 2.9rem;
+					text-align: center;
+					background-color: rgba(57, 64, 128, 0.6);
+				}
+			}
+			.square:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+	.stuff {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: flex-end;
+		align-items: center;
+		.stuff-picture {
+			background-image: url('../img/stuff_big.jpeg');
+		}
+		.stuff-title {
+			z-index: 0;
+			h3 {
+				font-size: 4.5rem;
+			}
+			.underline {
+				width: 300px;
+			}
+			p {
+				font-size: 3.2rem;
+			}
+		}
+		.gallery {
+			display: flex;
+			justify-content: center;
+			z-index: 1;
+			height: 70vh;
+			width: 100%;
+			.square {
+				display: flex;
+				width: 35%;
+				height: 30%;
+				transition: transform 0.9s;
+			}
+			.square:hover {
+				transform: scale(1.1);
+			}
+			.square1 {
+				background-image: url('../img/wypieki/bagietka_big.jpeg');
+				background-position: 0%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.square2 {
+				background-image: url('../img/wypieki/precelki_big.jpeg');
+				background-position: 0%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+			}
+			.square3 {
+				background-image: url('../img/wypieki/bulki_big.jpeg');
+				background-position: 0%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+			}
+			.square4 {
+				background-image: url('../img/wypieki/cynamonka_big.jpeg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+			}
+			.square5 {
+				background-image: url('../img/wypieki/halka_big.jpeg');
+				background-position: 0%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+			}
+			.square6 {
+				background-image: url('../img/wypieki/rogalik_big.jpeg');
+				background-position: 0%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.shops {
+		display: flex;
+		position: relative;
+		height: 100vh;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+
+		.shops-photo {
+			position: absolute;
+			background-image: url('../img/lokalization/budynek_big.jpeg');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
+			.shops-shadow {
+				background-color: rgba(0, 0, 0, 0.6);
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.shops-text {
+			display: flex;
+			position: absolute;
+			text-align: center;
+			flex-direction: column;
+			flex-wrap: wrap;
+
+			h3 {
+				font-size: 4.5rem;
+				color: $snow-header;
+			}
+			.underline {
+				width: 125px;
+			}
+		}
+		.shops-mini-map {
+			position: absolute;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+			justify-content: space-around;
+			align-content: flex-end;
+			width: 100%;
+			height: 50%;
+			.square {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: center;
+				width: 30%;
+				height: 50%;
+				background-color: red;
+				transition: transform 0.7s;
+				.text-on-square {
+					display: flex;
+					flex-direction: column;
+					align-content: center;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 40%;
+					color: $snow-header;
+					background-color: rgba($color: #000000, $alpha: 0.6);
+					h3 {
+						font-size: 3rem;
+					}
+					p {
+						font-size: 2.4rem;
+					}
+				}
+			}
+			.square:hover {
+				transform: scale(1.1);
+			}
+			.photo1 {
+				background-image: url('../img/lokalization/photo_1_big.jpeg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 1px solid grey;
+			}
+
+			.photo2 {
+				background-image: url('../img/lokalization/photo_2_big.jpeg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 1px solid grey;
+			}
+			.photo3 {
+				background-image: url('../img/lokalization/photo_3_big.jpeg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 1px solid grey;
+			}
+		}
+	}
+	.contact {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+		height: 20vh;
+		.social {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			i {
+				font-size: 20vh;
+				transition: transform 0.4s;
+			}
+			i:hover {
+				transform: scale(0.8);
+			}
+		}
+
+		.faceb {
+			background-color: #4267b2;
+		}
+		.insta {
+			background: linear-gradient(
+				90deg,
+				rgba(81, 91, 212, 1) 0%,
+				rgba(129, 52, 175, 1) 25%,
+				rgba(221, 42, 123, 1) 50%,
+				rgba(254, 218, 119, 1) 75%,
+				rgba(245, 133, 41, 1) 100%
+			);
+		}
+		.google {
+			color: black;
+			background: linear-gradient(
+				90deg,
+				rgba(255, 0, 14, 1) 0%,
+				rgba(253, 239, 29, 1) 33%,
+				rgba(31, 167, 65, 1) 67%,
+				rgba(56, 59, 209, 1) 100%
+			);
+		}
+		.twit {
+			background-color: #00acee;
+		}
+	}
+}
