@@ -1356,6 +1356,7 @@ nav .burger .line {
   }
   .shops .shops-mini-map {
     position: absolute;
+    margin: 20% 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
